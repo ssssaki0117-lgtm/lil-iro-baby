@@ -1,0 +1,587 @@
+/* ===== リセット・ベース ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #f5ebe8;
+  --color-white: #ffffff;
+  --color-pink: #e8a9a0;
+  --color-pink-light: #f5ebe8;
+  --color-beige: #f5ebe8;
+  --color-beige-dark: #c9b8ae;
+  --color-text: #4a3f3a;
+  --color-text-light: #9c8880;
+  --font-en: 'Cormorant Garamond', serif;
+  --font-jp: 'Noto Sans JP', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-jp);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== 共通 ===== */
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+
+.section-title {
+  font-family: var(--font-en);
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 60px;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 235, 232, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-beige);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 48px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+.logo a {
+  font-family: var(--font-en);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--color-text);
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-shop {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-beige-dark);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.nav-shop:hover {
+  color: var(--color-text);
+}
+
+/* ===== メインビジュアル ===== */
+.hero {
+  padding-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg);
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-sub {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--color-pink);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 2.8rem;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+}
+
+.hero-desc {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.hero-btn {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text);
+  border: 1px solid var(--color-beige-dark);
+  padding: 14px 40px;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background: var(--color-text);
+  color: var(--color-white);
+  border-color: var(--color-text);
+}
+
+.hero-image {
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background: var(--color-pink-light);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ===== アイテム ===== */
+.products {
+  background: #f5ebe8;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.products-grid .product-card {
+  width: calc(14% - 24px);
+  min-width: 120px;
+}
+
+.product-card:nth-child(1),
+.product-card:nth-child(2),
+.product-card:nth-child(3),
+.product-card:nth-child(4),
+.product-card:nth-child(5) {
+  grid-column: auto;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-img-wrap {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff);
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.04);
+}
+
+.product-name {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
+}
+
+.product-desc { display: none; }
+.product-link { display: none; }
+
+/* ===== about ===== */
+.about {
+  background: var(--color-pink-light);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image {
+  aspect-ratio: 2/3;
+  background: var(--color-beige);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.about-text .section-title {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.about-text p {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  line-height: 2;
+}
+
+.about-stitch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.about-stitch-line {
+  flex: 1;
+  border-top: 2px dashed var(--color-pink);
+  opacity: 0.6;
+}
+
+.about-stitch-icon {
+  color: var(--color-pink);
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+}
+
+/* ===== コラム ===== */
+.column {
+  background: var(--color-bg);
+}
+
+.column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.column-card {
+  display: block;
+  background: var(--color-white);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.column-card:hover {
+  transform: translateY(-4px);
+}
+
+.column-img-wrap {
+  aspect-ratio: 4/3;
+  background: var(--color-beige);
+  overflow: hidden;
+}
+
+.column-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.column-card:hover .column-img-wrap img {
+  transform: scale(1.04);
+}
+
+.column-text {
+  padding: 28px;
+}
+
+.column-tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  background: var(--color-pink);
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.column-text h3 {
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.column-text p {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+/* ===== ショップ ===== */
+.shop {
+  background: var(--color-beige);
+}
+
+.shop-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.shop-btn {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  color: var(--color-text);
+  border: 1px solid var(--color-beige-dark);
+  background: var(--color-white);
+  padding: 16px 56px;
+  transition: all 0.3s;
+}
+
+.shop-btn:hover {
+  background: var(--color-text);
+  color: var(--color-white);
+  border-color: var(--color-text);
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: var(--color-text);
+  color: var(--color-beige);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--font-en);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  margin-bottom: 28px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-nav a {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--color-beige-dark);
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--color-beige);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--color-beige-dark);
+  letter-spacing: 0.05em;
+}
+
+/* ===== スクロールインジケーター ===== */
+.scroll-indicator-wrap {
+  display: none;
+}
+@media (max-width: 768px) {
+  .scroll-indicator-wrap {
+    display: block;
+    padding: 8px 24px 0;
+  }
+  .scroll-indicator-track {
+    width: 100%;
+    height: 2px;
+    background: #e0d8d0;
+    position: relative;
+  }
+  .scroll-indicator-thumb {
+    position: absolute;
+    height: 2px;
+    background: #4a3f3a;
+    transition: left 0.1s;
+  }
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .nav {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .logo {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-inner {
+    padding: 70px 24px;
+  }
+
+  .products .section-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .products .section-title,
+  .products .section-sub {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .products-grid {
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+    justify-content: flex-start !important;
+    padding: 0 24px 20px;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scrollbar-width: thin;
+    scrollbar-color: #4a3f3a #e8e0d8;
+  }
+  .products-grid::-webkit-scrollbar {
+    height: 2px;
+  }
+  .products-grid::-webkit-scrollbar-track {
+    background: #e8e0d8;
+    margin: 0 24px;
+  }
+  .products-grid::-webkit-scrollbar-thumb {
+    background: #4a3f3a;
+  }
+  .products-grid .product-card {
+    min-width: 33vw;
+    width: 33vw;
+    flex-shrink: 0;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .column-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .shop-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
