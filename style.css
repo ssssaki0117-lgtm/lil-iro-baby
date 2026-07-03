@@ -727,11 +727,20 @@ a {
 /* ===== レスポンシブ ===== */
 @media (max-width: 768px) {
   .nav {
-    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 24px 12px;
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
   }
 
   .nav-right {
@@ -739,7 +748,7 @@ a {
   }
 
   .logo {
-    grid-column: 1 / -1;
+    order: -1;
     text-align: center;
   }
 
