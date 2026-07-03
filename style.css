@@ -349,6 +349,68 @@ a {
   }
 }
 
+/* ===== お客様の声 ===== */
+.voice {
+  background: var(--color-white);
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.voice-card {
+  background: var(--color-bg);
+  padding: 28px 28px 22px;
+  border-radius: 2px;
+}
+
+.voice-text {
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--color-text);
+  margin-bottom: 14px;
+}
+
+.voice-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+.voice-meta::before {
+  content: "— ";
+}
+
+.voice-more {
+  text-align: center;
+  margin-top: 44px;
+}
+
+.voice-more a {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-beige-dark);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.voice-more a:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .voice-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .about-insta {
   margin-top: 24px;
 }
