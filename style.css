@@ -210,6 +210,14 @@ a {
   background: #f5ebe8;
 }
 
+.products .section-inner {
+  padding-bottom: 0;
+}
+
+.products .section-sub {
+  margin-bottom: 32px;
+}
+
 .products-grid {
   display: flex;
   flex-wrap: wrap;
@@ -426,8 +434,19 @@ a {
 
 @media (max-width: 768px) {
   .voice-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .voice-card {
+    padding: 18px 16px 14px;
+  }
+  .voice-text {
+    font-size: 0.72rem;
+    line-height: 1.75;
+    margin-bottom: 10px;
+  }
+  .voice-meta {
+    font-size: 0.65rem;
   }
 }
 
