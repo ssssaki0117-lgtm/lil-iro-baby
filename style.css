@@ -285,6 +285,70 @@ a {
   margin-bottom: 4px;
 }
 
+/* ===== ご注文について（商品ページ共通） ===== */
+.order-info {
+  margin-top: 80px;
+  padding: 48px 40px;
+  background: #f5ebe8;
+  border-radius: 2px;
+}
+
+.order-info-title {
+  text-align: center;
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 1.05rem;
+  letter-spacing: 0.2em;
+  color: #4a3f3a;
+  margin-bottom: 8px;
+}
+
+.order-info-sub {
+  text-align: center;
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: #9c8880;
+  margin-bottom: 36px;
+}
+
+.order-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.order-info-item h3 {
+  font-family: var(--font-jp);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #4a3f3a;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dcc8c0;
+}
+
+.order-info-item p {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: #7a6a62;
+}
+
+@media (max-width: 768px) {
+  .order-info {
+    margin-top: 56px;
+    padding: 36px 24px;
+  }
+  .order-info-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
 /* ===== about ===== */
 .about {
   background: var(--color-pink-light);
