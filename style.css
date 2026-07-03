@@ -476,7 +476,7 @@ a {
 
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0.8fr 2fr;
   gap: 60px;
   align-items: center;
 }
@@ -755,6 +755,12 @@ a {
     background: #4a3f3a;
     transition: left 0.1s;
   }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    padding: 0 24px;
+  }
 }
 
 /* ===== レスポンシブ ===== */
@@ -792,8 +798,12 @@ a {
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px 24px;
+    gap: 32px;
+    padding: 40px 24px 24px;
+  }
+
+  .hero-desc {
+    margin-bottom: 0;
   }
 
   .hero-image {
@@ -846,7 +856,12 @@ a {
 
   .about-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
+  }
+
+  .about-image {
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .column-grid {
