@@ -267,6 +267,24 @@ a {
 .product-desc { display: none; }
 .product-link { display: none; }
 
+.product-price {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-top: 4px;
+}
+
+.item-price {
+  font-family: var(--font-jp);
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: #4a3f3a;
+  margin-bottom: 4px;
+}
+
 /* ===== about ===== */
 .about {
   background: var(--color-pink-light);
