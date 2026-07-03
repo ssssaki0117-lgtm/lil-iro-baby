@@ -736,7 +736,8 @@ a {
   .nav-links {
     display: flex;
     justify-content: center;
-    gap: 22px;
+    flex-wrap: wrap;
+    gap: 6px 16px;
   }
 
   .nav-links a {
