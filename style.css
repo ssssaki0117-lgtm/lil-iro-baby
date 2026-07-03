@@ -338,6 +338,26 @@ a {
   color: #7a6a62;
 }
 
+.order-info-more {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.order-info-more a {
+  font-family: var(--font-jp);
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-beige-dark);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.order-info-more a:hover {
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
   .order-info {
     margin-top: 56px;
