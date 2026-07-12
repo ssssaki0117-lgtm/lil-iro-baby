@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ssssaki0117-lgtm.github.io/lil-iro-baby/sitemap.xml
+Sitemap: https://lil-iro-baby.com/sitemap.xml
