@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sweet-truth-9f16",
+  "compatibility_date": "2026-07-23",
+  "assets": {
+    "directory": "./"
+  }
+}
